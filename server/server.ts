@@ -10,16 +10,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/test', function (req, res) {
-    res.json(data_1234)
-    //res.send('test view')
+    res.send('test view')
 });
 
 app.get('/1234', function (req, res) {
-    res.send('1234')
+    res.json(data_1234)
 });
 
 app.get('/4321', function (req, res) {
-    res.send('4321')
+    res.send(data_4321)
 });
 
 app.listen(8080, function () {
