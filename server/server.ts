@@ -1,6 +1,5 @@
 import express = require('express');
-var data_1234 = require('../data/data-1234.json');
-var data_4321 = require('../data/data-4321.json');
+const fs = require('fs');
 
 // Create a new express app instance
 const app: express.Application = express();
@@ -16,11 +15,15 @@ app.get('/', function (req, res) {
 });
 
 app.get('/1234', function (req, res) {
-    res.json(data_1234)
+    let rawData = fs.readFileSync('./data/data-1234.json');
+    let jsonData = JSON.parse(rawData);
+    res.json(jsonData);
 });
 
 app.get('/4321', function (req, res) {
-    res.json(data_4321)
+    let rawData = fs.readFileSync('./data/data-4321.json');
+    let jsonData = JSON.parse(rawData);
+    res.json(jsonData);
 });
 
 app.listen(8080, function () {
