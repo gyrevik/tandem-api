@@ -1,13 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 var express = require("express");
+var data_1234 = require('../data/data-1234.json');
+var data_4321 = require('../data/data-4321.json');
 // Create a new express app instance
 var app = express();
 app.get('/', function (req, res) {
     res.send('Hello 8080!');
 });
 app.get('/test', function (req, res) {
-    res.json({ username: 'Flavio' });
+    res.json(data_1234);
     //res.send('test view')
 });
 app.get('/1234', function (req, res) {
