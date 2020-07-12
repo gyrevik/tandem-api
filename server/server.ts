@@ -12,11 +12,7 @@ app.use(function(req, res, next) {
 });
 
 app.get('/', function (req, res) {
-    res.send('Hello 8080!');
-});
-
-app.get('/test', function (req, res) {
-    res.send('test view')
+    res.send('Hello World!');
 });
 
 app.get('/1234', function (req, res) {
@@ -24,7 +20,7 @@ app.get('/1234', function (req, res) {
 });
 
 app.get('/4321', function (req, res) {
-    res.send(data_4321)
+    res.json(data_4321)
 });
 
 app.listen(8080, function () {
