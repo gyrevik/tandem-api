@@ -8,7 +8,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/test', function (req, res) {
-    res.send('test view')
+    res.json({ username: 'Flavio' })
+    //res.send('test view')
 });
 
 app.get('/1234', function (req, res) {
