@@ -16,13 +16,11 @@ app.get('/1234', function (req, res) {
     var rawData = fs.readFileSync('./data/data-1234.json');
     var jsonData = JSON.parse(rawData);
     res.json(jsonData);
-    console.log('jsonData:', jsonData);
 });
 app.get('/4321', function (req, res) {
     var rawData = fs.readFileSync('./data/data-4321.json');
     var jsonData = JSON.parse(rawData);
     res.json(jsonData);
-    console.log('jsonData:', jsonData);
 });
 app.listen(8080, function () {
     console.log('App is listening on port 8080!');
